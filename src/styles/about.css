@@ -1,0 +1,297 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    width: fit-content;
+    text-decoration: none;
+}
+.main_container{
+    margin: 0;
+    padding: 0;
+}
+.button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 15px 30px;
+}
+
+/* Hero section the first section of the Home page */
+.intro_container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url("../../src/images/wallll.jpg") fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.intro_container .intro_container_inner{
+    width: 90%;
+    margin-top: 150px;
+}
+.intro_container .intro_container_inner h1{
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+    font-size: 52px;
+    width: 350px;
+    line-height: 1.2em;
+}
+.intro_container .intro_container_inner .intro_text{
+    color: #fff;
+    width: 700px;
+    font-size: 16px;
+    border-left: 5px solid #EF1514;
+    padding-left: 10px;
+    margin: 20px 0 30px;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+.intro_container .intro_container_inner .intro_button_container{
+    width: fit-content;
+}
+.intro_container .intro_container_inner .button{
+    display: flex;
+    align-items: center;
+    background-color: #EF1514;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.intro_container .intro_container_inner .button:hover{
+    background-color: #ad0f0f;
+}
+.intro_container .intro_container_inner .rightarrowIcon{
+    width: 25px;
+    height: 20px;
+}
+
+/* The About section */
+.about{
+    width: 100%;
+    padding: 50px 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.about .inner_about .about_text_heading{ 
+    position: relative;
+    margin-top: 20px;
+    width: 220px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+.about .inner_about{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.about .inner_about .about_top .about_heading{
+    display: flex;
+}
+.about .inner_about .first_header,  .about_values_container h1{
+    position: relative;
+    margin-bottom: 20px;
+}
+.about .inner_about .first_header::after,  .about_values_container h1::after{
+    content: " ";
+    background-color: #EF1514;
+    position: absolute;
+    bottom: -15%;
+    left: 0%;
+    height: 5px;
+    width: 50px;
+    border-radius: 2px;
+}
+.about .inner_about .second_header{
+    position: relative;
+    margin-bottom: 20px;
+    text-align: end;
+}
+.about .inner_about .second_header::after{
+    content: " ";
+    background-color: #EF1514;
+    position: absolute;
+    bottom: -16%;
+    right: 0%;
+    height: 5px;
+    width: 50px;
+    border-radius: 2px;
+}
+.about .inner_about .about_text_container p{
+    line-height: 28px;
+    font-size: 16px;
+    margin: 5px 0px;
+    color: black;
+}
+.mission_vision, .about_values{
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mission_vision h2, .about_values h2{
+    /* width: 200px; */
+    text-align: center;
+    padding: 0px 20px;
+    margin: 0px auto;
+    /* color: #EF1514; */
+}
+blockquote {
+	font-weight: 400;
+	font-size: 32px;
+	max-width: 600px;
+	line-height: 1.4;
+	position: relative;
+	margin: 10px auto;
+	padding: 5px;
+    text-align: center;
+}
+blockquote:before,
+blockquote:after {
+	position: absolute;
+	color: #2f3239;
+	font-size: 68px;
+	width: 3rem;
+	height: 3rem;
+    font-family: sans-serif;
+}
+blockquote:before {
+	content: '“';
+	left: -2rem;
+	top: -1.5rem;
+}
+blockquote:after {
+	content: '”';
+	right: -2rem;
+	bottom: 0.5rem;
+}
+.about_values ul{
+    margin: 0;
+    padding-left: 18px;
+}
+.about_values_container h1{
+    margin-top: 0px;
+}
+
+/* Tab Screen */
+@media only screen and (max-width: 768px) {
+    .intro_container .intro_container_inner{
+        margin-top: 100px;
+    }
+    .intro_container .intro_container_inner h1{
+        font-size: 46px;
+        width: 300px;
+    }
+    .intro_container .intro_container_inner .intro_text{
+        font-size: 14px;
+        width: 480px;
+    }
+    .about .inner_about h1, .about_values_container h1{
+        font-size: 24px;
+    }
+    .about .inner_about p{
+        margin-top: 0;
+        font-size: 16px;
+    }
+    
+    blockquote{
+        font-size: 24px;
+    }
+    blockquote p{
+        width: 400px;
+        margin: 15px auto;
+    }
+    blockquote:before{
+        top: -0.5rem;
+        left: -2rem;
+    }
+    blockquote:after {
+        bottom: -1rem;
+        right: -1rem;
+    }
+    blockquote:before, blockquote:after{
+        font-size: 46px;
+    }
+}
+
+/* Mobile Screen */
+@media only screen and (max-width: 600px) {
+    .main_container h1{
+        font-size: 24px;
+    }
+    .about{
+        padding: 30px 0px;
+    }
+    .main_container h2{
+        font-size: 18px;
+    }
+    .button{
+        padding: 15px 20px;
+        font-size: 14px !important;
+    }
+    .intro_container{
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/images/wallll_mobile.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .intro_container .intro_container_inner{
+        margin-top: 0px;
+    }
+    .intro_container .intro_container_inner{
+        margin-top: 0px;
+    }
+    .intro_container .intro_container_inner h1{
+        font-size: 34px;
+        width: 100%;
+    }
+    .intro_container .intro_container_inner .intro_text{
+        width: 100%;
+        font-size: 14px;
+    }
+    .about .inner_about .about_top .about_heading{
+        display: block;
+    }
+    .about .inner_about .about_top .about_text_container{
+        padding-left: 0;
+    }
+    .about .inner_about .about_top .about_image_container{
+        height: 100%;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .about .partners img{
+        height: 90%;
+    }
+    blockquote p{
+        width: 100%;
+        font-size: 18px;
+    }
+    blockquote:before, blockquote:after{
+        font-size: 42px;
+    }
+    blockquote:before{
+        left: -1rem;
+    }
+    blockquote:after{
+        bottom: -2rem;
+    }
+    .breaker{
+        display: none;
+    }
+}

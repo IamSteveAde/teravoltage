@@ -1,0 +1,401 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Css code for the navbar */
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+.lock-scroll {
+    overflow: hidden;
+}
+.navbar{
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.3);
+    padding: 10px 50px;
+    animation: 1s ease-in slideInFromTop;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+.navbar .logo img{
+    height: 63px;
+    cursor: pointer;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.navbar .logo img:hover{
+    filter: brightness(0.7);
+    -webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+.navbar .nav_links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.navbar .nav_links li a{
+    padding: 0;
+    margin-left: 30px;
+    text-decoration: none;
+    animation: 1.5s ease-in 0s 1 slideInFromTop;
+}
+.navbar .nav_links li .text_link{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+.navbar .nav_links li .text_link:hover{
+    text-decoration: none;
+    color: #ebc73d;
+}
+.navbar .nav_links li .text_link:visited{
+    text-decoration: none;
+}
+.navbar .nav_links li .active_link{
+    color: #ebc73d !important;
+}
+.navbar .nav_links li .active_link:hover{
+    color: #fff !important;
+}
+.sidebar_control_container{
+    display: none;
+    align-items: center;
+}
+.togglebuttoncontainer{
+    display: none;
+    justify-content: center;
+    cursor: pointer;
+}
+.togglebutton{
+    font-size: 28px;
+    color: #ebc73d;
+    z-index: 1000;
+}
+#closebtn{
+    position: fixed;
+}
+#menubtn, #closebtn{
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    display: none;
+    z-index: 100;
+    color: #ebc73d
+}
+#menubtn:hover, #closebtn:hover, #menubtn:active, #closebtn:active{
+    color: #ebc73d;
+}
+
+
+/* This is the css code for the footer */
+footer{
+    margin: 0px;
+    padding: 0px;
+    background: #2f3239;
+    font-family: 'Poppins', sans-serif;
+}
+footer p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+.footer_container{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+footer .copyright_container{
+    width: 100%;
+    margin: 0 auto;
+}
+footer .copyright_container p{
+    margin: 0;
+    text-align: center;
+    padding: 20px 0px;
+    color: #bbbbbb;
+    cursor: pointer;
+}
+footer .footer_logo_container img{
+    cursor: pointer;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+footer .footer_logo_container img:hover{
+    filter: brightness(0.7);
+    -webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+footer .copyright_container p:hover{
+    color: #fff;
+}
+.footer_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+footer .socials{
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    margin-top: 15px;
+}
+.footer_link_container ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer_link_container li{
+    padding-bottom: 10px;
+}
+.footer_link_container ul a{
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #bbbbbb;
+    font-weight: 600;
+}
+.footer_link_container ul a:hover{
+    color: #fff;
+}
+footer .news_letter_container h3{
+    margin: 5px 0px 10px;
+    color: #fff;
+}
+footer .news_letter_container p{
+    margin: 5px 0px 10px;
+    color: #bbbbbb;
+}
+footer .news_letter_container form{
+    display: flex;
+    align-items: center;
+}
+footer .news_letter_container input[type="email"]{
+    padding: 13px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #2f3239;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+footer .news_letter_container .submit_newsletter_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebc73d;
+    color: #fff;
+    padding: 13px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-weight: 600;
+    text-transform: capitalize;
+    /*  */
+    font-family: 'Poppins', sans-serif;
+    border-radius: 3px;
+}
+footer .news_letter_container .submit_newsletter_button:hover{
+    background-color: #ebc73d;
+}
+footer .socials div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 3px;
+    text-align: center;
+    background: #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer .socials div:hover{
+    background: #ebc73d;
+}
+footer .socials div img{
+    height: 20px;
+    width: 20px;
+}
+footer .socials div .smallericon{
+    height: 24px;
+    width: 24px;
+}
+
+/* Tab Screen */
+@media only screen and (max-width: 768px) {
+    .navbar{
+        padding: 10px 40px;
+        overflow: visible;
+    }
+    @keyframes navFadeInFromSide {
+        0% {
+            opacity: 0;
+            right: 0%;
+        }
+        100% {
+            opacity: 1;
+            right: 5%;
+        }
+    }
+    #closebtn{
+        right: 5%;
+        animation: 0.8s ease-in 0.2s 1 navFadeInFromSide;
+        z-index: 200;
+    }
+    .navbar .nav_links{
+        position: fixed;
+        top: 0%;
+        right: 0px;
+        bottom: 0%;
+        background-color: rgb(0, 0, 0, 0.9);
+        -webkit-backdrop-filter: blur(3rem);
+        backdrop-filter: blur(3rem); 
+        display: block;
+        width: 0px;
+        transition: 0.5s ease-in width;
+        text-align: center;
+        margin: 0;
+        z-index: 100;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .navbar .nav_links li:first-child{
+        margin-top: 80px;
+    }
+    @keyframes navFadeInFromTop {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .navbar .nav_links li{
+        padding: 20px 0px;
+        margin-left: 0px;
+        text-align: center;
+        animation: 1s ease-in 1s 1 navFadeInFromTop;
+    }
+    .navbar .nav_links li a{
+        margin-left: 0px;
+    }
+    .sidebar_control_container{
+        display: flex;
+    }
+    #menubtn{
+        display: block;
+    }
+    .active:hover{
+        color: #ebc73d !important;
+    }
+    .togglebuttoncontainer{
+        display: flex;
+    }
+    .footer_container{
+        padding-top: 30px;
+    }
+    .footer_logo_container img{
+        width: 150px;
+    }
+    footer .news_letter_container h3{
+        font-size: 18px;
+    }
+    footer .news_letter_container input[type="email"]{
+        font-size: 14px;
+        padding: 10px;
+        margin-right: 5px;
+    }
+    footer .news_letter_container .submit_newsletter_button{
+        font-size: 14px;
+        padding: 10px;
+    }
+    footer .footer_link_container p{
+        margin: 0px 0px 10px;
+    }
+    footer .socials{
+        margin-top: 10px;
+    }
+    footer .socials div{
+        width: 25px;
+        height: 25px;
+    }
+    footer .socials div img{
+        width: 18px;
+        height: 18px;
+    }
+    footer .copyright_container p{
+        font-size: 12px;
+        padding: 15px 0px;
+    }
+}
+
+/* Phone Screen */
+@media only screen and (max-width: 600px){
+    .navbar{
+        padding: 10px 20px;
+    }
+    .navbar .logo img{
+        height: 50px;
+    }
+    .footer_top{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_top .breaker{
+        display: none;
+    }
+    .footer_logo_container img{
+        display: none;
+    }
+    footer .news_letter_container p{
+        font-size: 14px;
+    }
+    .footer_link_container{
+        margin: 15px auto 0px;
+        text-align: center;
+    }
+    footer .news_letter_container form{
+        max-width: 290px;
+        display: flex;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+    footer .news_letter_container input[type="email"]{
+        width: 70%;
+        box-sizing: border-box;
+    }
+    footer .news_letter_container .submit_newsletter_button{
+        width: 30%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
